@@ -5,7 +5,7 @@ pragma solidity ^0.8.17;
 import {ECDSA} from "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 import {ReentrancyGuard} from "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import {UserOperation, UserOperationLib} from "@account-abstraction/contracts/interfaces/UserOperation.sol";
-import {BasePaymaster, IEntryPoint} from "../../core/BasePaymaster.sol";
+import {BasePaymaster, IEntryPoint} from "../../core/BasePaymasterBico.sol";
 import {PaymasterHelpers, PaymasterData, PaymasterContext} from "../../helpers/PaymasterHelper.sol";
 
 
