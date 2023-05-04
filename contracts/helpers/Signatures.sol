@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.8.17;
 
-import "../entrypoint/Helpers.sol";
+import "../core/Helpers.sol";
 
 /**
  * @dev Signatures layout used by the Paymasters and Wallets internally

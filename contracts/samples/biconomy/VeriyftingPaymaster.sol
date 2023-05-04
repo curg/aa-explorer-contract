@@ -1,13 +1,15 @@
-pragma solidity 0.8.17;
+pragma solidity ^0.8.17;
 
 /* solhint-disable reason-string */
 /* solhint-disable no-inline-assembly */
 import {ECDSA} from "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 import {ReentrancyGuard} from "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import {UserOperation, UserOperationLib} from "@account-abstraction/contracts/interfaces/UserOperation.sol";
-import {BasePaymaster, IEntryPoint} from "../../BasePaymaster.sol";
-import {PaymasterHelpers, PaymasterData, PaymasterContext} from "../../PaymasterHelpers.sol";
-import {SingletonPaymasterErrors} from "../../../common/Errors.sol";
+import {BasePaymaster, IEntryPoint} from "../../core/BasePaymaster.sol";
+import {PaymasterHelpers, PaymasterData, PaymasterContext} from "../../helpers/PaymasterHelper.sol";
+
+
+import {SingletonPaymasterErrors} from "../../common/Errors.sol";
 
 /**
  * @title A sample paymaster that uses external service to decide whether to pay for the UserOp.

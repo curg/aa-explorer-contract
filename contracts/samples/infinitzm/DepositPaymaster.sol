@@ -6,7 +6,7 @@ pragma solidity ^0.8.12;
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 
-import "../core/BasePaymaster.sol";
+import "../../core/BasePaymasterInfinity.sol";
 import "./IOracle.sol";
 
 /**
@@ -23,7 +23,7 @@ import "./IOracle.sol";
  * It can only be used if it is "whitelisted" by the bundler.
  * (technically, it can be used by an "oracle" which returns a static value, without accessing any storage)
  */
-contract DepositPaymaster is BasePaymaster {
+abstract contract DepositPaymaster is BasePaymaster {
 
     using UserOperationLib for UserOperation;
     using SafeERC20 for IERC20;
