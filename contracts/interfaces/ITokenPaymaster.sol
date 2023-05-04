@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-import "../../interfaces/IPaymaster.sol";
+import "./IPaymaster.sol";
 import "@openzeppelin/contracts/utils/introspection/ERC165.sol";
 
 interface ITokenPaymaster is IPaymaster, IERC165 {
