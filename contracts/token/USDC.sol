@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/draft-ERC20Permit.sol";
 import "hardhat/console.sol";
 
-contract USDCoin is ERC20, Ownable, ERC20Permit {
+contract CURGToken is ERC20, Ownable, ERC20Permit {
     constructor() ERC20("USD Mock Coin", "USDMC") ERC20Permit("USD Coin") {
        _mint(owner(), type(uint64).max);
     }

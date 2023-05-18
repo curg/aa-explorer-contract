@@ -4,15 +4,10 @@ dotenv.config();
 import "solidity-coverage";
 import "@nomicfoundation/hardhat-toolbox";
 import { HardhatUserConfig } from "hardhat/config";
-const GOERLI_PRIVATE_KEY =
-  process.env.GOERLI_PRIVATE_KEY! ||
-  "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"; // test private key
-const SEPOLIA_PRIVATE_KEY =
-  process.env.SEPOLIA_PRIVATE_KEY! ||
-  "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"; // test private key
+const SEPOLIA_PRIVATE_KEY = process.env.PRIVATE_KEY!; // test private key
 const MUMBAI_PRIVATE_KEY =
-  process.env.MUMBAI_PRIVATE_KEY! ||
-  "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"; // test private key
+  process.env.PRIVATE_KEY! ||
+  "d523572f9bc7a3f895dc75d45cb3b337e4f56c749ff660c66f687f9c83fc2c5c"; // test private key
 
 const optimizedComilerSettings = {
   version: "0.8.17",
@@ -73,29 +68,21 @@ const config: HardhatUserConfig = {
     localhost: {
       allowUnlimitedContractSize: true,
     },
-    goerli: {
-      url: `https://eth-goerli.g.alchemy.com/v2/${process.env.GORLI_KEY}`,
-      accounts: [GOERLI_PRIVATE_KEY],
-      gasPrice: "auto",
-      timeout: 1000000,
-    },
     sepolia: {
-      url: `https://eth-goerli.g.alchemy.com/v2/${process.env.SEPOLIA_KEY}`,
+      url: `https://eth-sepolia.g.alchemy.com/v2/${process.env.SEPOLIA_KEY}`,
       accounts: [SEPOLIA_PRIVATE_KEY],
       gasPrice: "auto",
       timeout: 1000000,
     },
     mumbai: {
-      url: `https://eth-goerli.g.alchemy.com/v2/${process.env.MUMBAI_KEY}`,
+      url: `https://polygon-mumbai.g.alchemy.com/v2/3QqPSn3-dpXvRn9zyrrfXR-IGj6vT_iH`,
       accounts: [MUMBAI_PRIVATE_KEY],
       gasPrice: "auto",
       timeout: 1000000,
     },
   },
   etherscan: {
-    apiKey: {
-      goerli: process.env.GOERLI_API_KEY || process.env.ETHERSCAN_API_KEY || "",
-    },
+    apiKey: "7WPBYSKDQYDISVN8EE5R94MY7F4VWVU4PH",
   },
   paths: {
     sources: "./contracts",
@@ -105,7 +92,9 @@ const config: HardhatUserConfig = {
   },
   gasReporter: {
     currency: "USD",
-    coinmarketcap: process.env.COINMARKETCAP_API_KEY || "",
+    coinmarketcap:
+      process.env.COINMARKETCAP_API_KEY ||
+      "0d8632d7-c0e8-4a95-8778-c8795312e2e5",
     enabled: true,
   },
 };

@@ -3,8 +3,7 @@ pragma solidity ^0.8.12;
 
 /* solhint-disable reason-string */
 /* solhint-disable no-inline-assembly */
-
-import "../../core/BasePaymasterInfinity.sol";
+import "../../core/BasePaymaster.sol";
 import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 /**
  * A sample paymaster that uses external service to decide whether to pay for the UserOp.

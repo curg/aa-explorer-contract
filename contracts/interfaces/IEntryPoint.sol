@@ -11,7 +11,6 @@ pragma solidity ^0.8.12;
 
 import "./UserOperation.sol";
 import "./IStakeManager.sol";
-import "./IAggregator.sol";
 import "./INonceManager.sol";
 
 interface IEntryPoint is IStakeManager, INonceManager {
@@ -112,7 +111,6 @@ interface IEntryPoint is IStakeManager, INonceManager {
         UserOperation[] userOps;
 
         // aggregator address
-        IAggregator aggregator;
         // aggregated signature
         bytes signature;
     }
