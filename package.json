@@ -26,6 +26,7 @@
     "@account-abstraction/contracts": "^0.5.0",
     "@chainlink/contracts": "^0.6.1",
     "@openzeppelin/contracts": "^4.8.3",
+    "@openzeppelin/contracts-upgradeable": "^4.8.3",
     "dotenv": "^16.0.3",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4"

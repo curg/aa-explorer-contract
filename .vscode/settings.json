@@ -1,0 +1,5 @@
+{
+  "solidity.defaultCompiler": "localNodeModule",
+  "solidity.compileUsingRemoteVersion": "latest",
+  "solidity.compileUsingLocalVersion": "/Users/minwoonam/Documents/aa-explorer-contract/soljson-v0.8.20+commit.a1b79de6.js"
+}
